@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap');
+
+
+:root{
+    --primary-color: white;
+    --text-color: gray; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+}
+
+body{
+    font-family: Roboto Mono, Arial;
+    background: rgb(42, 66, 117);
+    color: var(--primary-color);
+
+}
+
+/* estilos y decoraciones */
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+    color: var(--text-color);
+
+}
+
+.title {
+    font-size: 1.8rem;
+}
+
+.item_preTitle {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 300;
+
+}
+
+.item_title {
+    font-size: 1.6rem;
+    color: aliceblue;
+    font-weight: 500;
+    margin: 0.8rem 0;
+
+}
+
+.item_subtitule {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 0;
+}
+
+/*Layouts*/
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,34,75,1) 49%, rgba(0,107,143,1) 100%);
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+ 
+}
+
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 90%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }
+}
+
+
+.profile {
+    grid-column: 1/ -1;
+    margin-bottom: 2rem;
+}
+
+.group1, .group2, .group3, .group4 {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* ==== Profile ====*/
+.profile_container {
+    display: flex;
+    gap: 2rem;
+}
+
+.profile_progileImg {
+    max-width: 250px;
+}
+
+.profile_name_firstName {
+    font-weight: 600;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    text-transform: uppercase;
+    display: block;
+}
+
+.profile_name_lastName {
+    font-weight: 200;
+    font-size: clamp(2rem, 8vw, 2.2rem);
+    text-transform: uppercase;
+    display: block;
+}
+
+.profile_title {
+    font-size: clamp(1rem, 6vw, 1.2rem);
+}
+
+.item_subtitle {
+    font-size: clamp(1rem, 6vw, 1.2rem);
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 768px){
+    .profile_container {
+        flex-direction: column;
+    }
+}
+
+/*====== Habilidades ======*/
+.skill_list {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+.skill_bar {
+    width: 350px;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+    margin-left: auto;
+}
+
+li {
+    list-style: none;
+    width: 350px;
+    text-align: center;
+}
+
+.progress {
+    width: var(--w);
+    height: 20px;
+    background-color: rgb(42, 66, 117);
+    border-radius: 10px;
+    animation: up 1s ease;
+}
+
+@keyframes up {
+    0%{width:0%}
+    100%{width: var(--w);}
+
+}
+
+/*====== Referencias ======*/
+.ref_item {
+    margin-top: 2rem;
+}
+
+.ref_name {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/* ======= Educación =======*/
+.edu_item {
+    margin-top: 2rem;
+}
+
+/* ======== Experiencia =========*/
+
+.exp_item {
+    margin-top: 2rem;
+}
+
+/* Redes*/
+.social {
+    width: 15%;
+    margin: 10px;
+}
